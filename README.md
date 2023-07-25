@@ -9,11 +9,11 @@ Dokumen soal dapat diakses melalui [link ini](https://docs.google.com/document/d
 ## Panduan Memulai
 1. Tambahkan ***remote*** baru bernama **`upstream`** untuk mendapatkan code dari repository DDP2 dengan perintah:
     ```bash
-    git remote add upstream https://gitlab.com/DDP2-CSUI/sp-ddp2-2023/template-tp4-sp-ddp2.git
+    git remote add upstream https://gitlab.com/DDP2-CSUI/sp-ddp2-2023/tp4-sp-ddp2.git
     ```
     Jika sebelumnya anda telah menambahkan **`upstream`**, Anda dapat mengganti url **`upstream`** ke DDP2 dengan perintah:
     ```bash
-    git remote set-url upstream https://gitlab.com/DDP2-CSUI/sp-ddp2-2023/template-tp4-sp-ddp2.git
+    git remote set-url upstream https://gitlab.com/DDP2-CSUI/sp-ddp2-2023/tp4-sp-ddp2.git
     ```
     > Note: Sekarang, pada git anda terdapat 2 source remote, yakni: **`origin`**, repository milik anda dan **`upstream`**, repository DDP2 tempat soal dan template Tugas Pemrograman 3 berada.
 2. Buat direktori baru pada folder TP4 anda kemudian pindahkan terminal ke ***path*** tersebut.
