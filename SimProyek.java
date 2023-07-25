@@ -68,6 +68,8 @@ public class SimProyek {
                     nomorPilihan = scanner.nextInt();
                     scanner.nextLine();
 
+                    app.printDivisionDetail(nomorPilihan);
+
                     System.out.print("Masukkan nomor anggota yang ingin dihapus: ");
                     nomorAnggota = scanner.nextInt();
                     scanner.nextLine();
@@ -120,7 +122,7 @@ public class SimProyek {
                     System.out.println("Daftar karyawan pada sistem SimProyek ");
                     System.out.println("Nama - Divisi - Gaji - Proyek ");
                     for (int i = 0; i < app.employeeList.size(); i++) {
-                        System.out.printf("%d . %s - Divisi %s - %d - %s", 
+                        System.out.printf("%d. %s - Divisi %s - %d - %s \n", 
                             i+1, 
                             // TODO: lengkapi logika di masing-masing method
                             app.employeeList.get(i).getName(),
@@ -227,6 +229,18 @@ public class SimProyek {
         Employee deni = new Employee("Deni", 3, 0.15);
         Employee tina = new Employee("Tina", 2, 0.1);
 
+        this.employeeList.add(budi);
+        this.employeeList.add(ica);
+        this.employeeList.add(andi);
+        this.employeeList.add(udin);
+        this.employeeList.add(fira);
+        this.employeeList.add(opet);
+        this.employeeList.add(mirna);
+        this.employeeList.add(asep);
+        this.employeeList.add(yudi);
+        this.employeeList.add(deni);
+        this.employeeList.add(tina);
+        
         hrd.addEmployee(budi);
         hrd.addEmployee(udin);
         hrd.addEmployee(fira);
