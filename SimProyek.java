@@ -46,7 +46,7 @@ public class SimProyek {
                     break;
                 case 2:
                     System.out.println("Berikut adalah daftar proyek yang dapat Anda pilih: ");
-                    app.printProjectList();
+                    app.printProjectListNumberOnly();
 
                     System.out.print("Pilih nomor proyek: ");
                     nomorPilihan = scanner.nextInt();
@@ -62,7 +62,7 @@ public class SimProyek {
                     break;
                 case 3:
                     System.out.println("Berikut adalah daftar proyek yang dapat Anda pilih: ");
-                    app.printProjectList();
+                    app.printProjectListNumberOnly();
 
                     System.out.print("Pilih nomor proyek: ");
                     nomorPilihan = scanner.nextInt();
@@ -81,7 +81,7 @@ public class SimProyek {
                     break;
                 case 4:
                     System.out.println("Berikut adalah daftar proyek yang dapat Anda pilih: ");
-                    app.printProjectList();
+                    app.printProjectListNumberOnly();
 
                     System.out.print("Pilih nomor proyek: ");
                     nomorPilihan = scanner.nextInt();
@@ -163,6 +163,9 @@ public class SimProyek {
     }
 
     // Silahkan tambahkan method lain yang dirasa dapat membantu
+
+    private void printProjectListNumberOnly() {
+    }
 
     private void printDivisionDetail(int nomorPilihan) {
     }
