@@ -109,12 +109,22 @@ public class SimProyek {
                     lamaBekerja = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Lama bekerja (tahun): ");
+                    System.out.print("Bonus gaji: ");
                     bonusGaji = scanner.nextDouble();
                     scanner.nextLine();
 
+                    System.out.println("Divisi:");
+                    System.out.println("1. HRD");
+                    System.out.println("2. Marketing");
+                    System.out.println("3. Design");
+                    System.out.println("4. Engineer");
+
+                    System.out.print("Pilih divisi: ");
+                    nomorPilihan = scanner.nextInt();
+                    scanner.nextLine();
+
                     // TODO: Kerjakan di dalam method ini
-                    app.addEmployee(namaKaryawan, jabatan, lamaBekerja, bonusGaji);
+                    app.addEmployee(namaKaryawan, jabatan, lamaBekerja, bonusGaji, nomorPilihan);
 
                     System.out.println();
                     break;
@@ -170,7 +180,7 @@ public class SimProyek {
     private void printDivisionDetail(int nomorPilihan) {
     }
 
-    private void addEmployee(String namaKaryawan, String jabatan, int lamaBekerja, double bonusGaji) {
+    private void addEmployee(String namaKaryawan, String jabatan, int lamaBekerja, double bonusGaji, int nomorDivisi) {
     }
 
     private void printProjectList() {
