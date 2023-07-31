@@ -6,7 +6,12 @@ public class HRD extends Division {
 
     @Override
     public void addEmployee(Employee employee) {
-        super.addEmployee(employee);
-        // TODO: Lengkapi
+        // Check if the employee is a Manager
+        if (employee instanceof Manager) {
+            super.addEmployee(employee);
+            System.out.println("Karyawan " + employee.getName() + " berhasil ditambahkan ke divisi HRD.");
+        } else {
+            System.out.println("Gagal: Karyawan yang ditambahkan ke divisi HRD harus berjabatan Manager.");
+        }
     }
 }

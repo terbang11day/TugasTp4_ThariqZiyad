@@ -6,7 +6,11 @@ public class Engineering extends Division {
 
     @Override
     public void addEmployee(Employee employee) {
-        super.addEmployee(employee);
-        // TODO: Lengkapi
+        if (employee instanceof Employee || employee instanceof Manager) {
+            super.addEmployee(employee);
+            System.out.printf("Karyawan %s berhasil ditambahkan ke divisi Engineering.\n", employee.getName());
+        } else {
+            System.out.println("Hanya Karyawan atau Manager yang dapat ditambahkan ke divisi Engineering.");
+        }
     }
 }

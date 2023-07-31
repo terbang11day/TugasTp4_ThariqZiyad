@@ -1,43 +1,57 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
-    // TODO: Tambahkan modifier untuk atribut
-    String name;
-    int yearsOfExperience;
-    double salaryMultiplier;
-    Division division;
-    List<Project> projects;
+    private String name;
+    private int yearsOfExperience;
+    private double salaryMultiplier;
+    private Division division;
+    private List<Project> projects;
 
-    // TODO: Lengkapi constructor
     public Employee(String name, int yearsOfExperience, double salaryMultiplier) {
         this.name = name;
         this.yearsOfExperience = yearsOfExperience;
         this.salaryMultiplier = salaryMultiplier;
+        this.projects = new ArrayList<>();
     }
 
     public int calculateSalary() {
-        // TODO Lengkapi logika untuk menghitung gaji
-        int divisionBaseSalary = division.baseSalary;
-        return (int) (divisionBaseSalary * (1 + salaryMultiplier + yearsOfExperience / 10));
+        int divisionBaseSalary = division.getBaseSalary();
+        return (int) (divisionBaseSalary * (1 + salaryMultiplier + yearsOfExperience / 10.0));
     }
 
     public String getDivisionName() {
-        //TODO: Lengkapi logika untuk mendapat string nama divisi
         return division.getClass().getSimpleName();
     }
 
     public String getProjectsString() {
-        //TODO: Lengkapi logika untuk mendapat string daftar proyek
-        StringBuilder sb = new StringBuilder();
+        StringBuilder projectsString = new StringBuilder();
         for (Project project : projects) {
-            sb.append(project.name).append(", ");
+            projectsString.append(project.getName()).append(", ");
         }
-        return sb.substring(0, sb.length() - 2);
+        if (projectsString.length() > 2) {
+            projectsString.setLength(projectsString.length() - 2);
+        }
+        return projectsString.toString();
+    }
+
+    public void setDivision(Division division) {
+        this.division = division;
     }
 
     public String getName() {
         return name;
     }
 
-    // Tambahkan getter & setter lainnya sesuai kebutuhan
+    public Division getDivision() {
+        return division;
+    }
+
+    public void addProject(Project project) {
+        projects.add(project);
+    }
+
+    public void removeProject(Project project) {
+        projects.remove(project);
+    }
 }
